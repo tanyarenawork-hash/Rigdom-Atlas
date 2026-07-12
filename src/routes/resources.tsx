@@ -10,7 +10,9 @@ export const Route = createFileRoute("/resources")({
       { name: "description", content: "Downloadable guides, certification recommendations, career resources, and curated reading." },
       { property: "og:title", content: "Resources — Rigdom Atlas" },
       { property: "og:description", content: "A working library of materials supporting personal finance education." },
+      { property: "og:url", content: "https://rigdomatlas.com/resources" },
     ],
+    links: [{ rel: "canonical", href: "https://rigdomatlas.com/resources" }],
   }),
   component: Resources,
 });
