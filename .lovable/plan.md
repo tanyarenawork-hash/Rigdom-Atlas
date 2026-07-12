@@ -1,39 +1,23 @@
-## Palette swap + Definitions tile
+## Change
 
-Two changes, both narrow.
+Convert `/guides` from an article list to a financial literacy glossary.
 
-### 1. Palette: Emerald Prestige → Navy Trust
+### Edits (single file: `src/routes/guides.tsx`)
 
-Update the token values in `src/styles.css` only — every component already reads through `--emerald` / `--emerald-soft` / `--emerald-deep` / `--gold` / `--gold-soft` / `--cream` / `--mist`, so remapping the raw hex values propagates site-wide with no component edits.
+1. Update `head()` meta: title "Financial Glossary — Rigdom Atlas"; description around plain-language definitions of essential personal-finance terms; matching og:title/og:description.
+2. Update `PageHero`: eyebrow "Financial Glossary", title "Essential terms in personal finance, defined plainly.", intro about clear reference definitions across the eight pillars.
+3. Replace the `guides` array with a `terms` array of ~24 entries shaped `{ cat, term, definition }` spanning Budgeting, Credit, Saving, Investing, Taxes, Real Estate, Entrepreneurship, Financial Planning. Examples:
+   - Budgeting — "Zero-Based Budget": Every dollar of income is assigned to a category so income minus allocations equals zero.
+   - Credit — "APR": The yearly cost of borrowing, expressed as a percentage that includes interest and certain fees.
+   - Investing — "Index Fund": A fund that mirrors a market index, offering broad diversification at low cost.
+   - Taxes — "Marginal Tax Rate": The tax rate applied to your next dollar of income, not your entire income.
+   - Real Estate — "Escrow": A neutral account holding funds or documents until the terms of a transaction are met.
+   - Entrepreneurship — "Pass-Through Entity": A business whose profits are taxed on the owner's personal return rather than at the entity level.
+   - Financial Planning — "Term Life Insurance": Coverage for a fixed period that pays a benefit only if death occurs within that term.
+   (Full set drafted at build time; ~3 per pillar.)
+4. Replace the article row markup: keep the same rounded bordered list container, but each row shows category eyebrow, `term` as the serif headline, and the `definition` as a paragraph beneath it. Remove the read-time span and the `ArrowUpRight` circular affordance (and its import) — glossary entries are not linked.
+5. Keep `Section`, `Disclaimer`, and overall spacing unchanged.
 
-- `--emerald` → `#0f1b3d` (deep navy, primary/foreground)
-- `--emerald-soft` → `#1e3a5f` (mid navy, secondary bands & hover)
-- `--emerald-deep` → `#0a1229` (darkest navy, for hover fills on dark tiles)
-- `--gold` → `#3b6fa0` (steel-blue accent — the palette's tertiary; replaces gold for links, rules, active underline)
-- `--gold-soft` → `#5c8cbf` (lighter steel-blue for hover)
-- `--cream` → `#e8edf3` (cool ivory, background)
-- `--mist` → `#dbe3ec` (slightly cooler muted band)
-- `--card` → `#f2f5f9` (near-cream card surface)
+### Out of scope
 
-Keep aliases (`--color-navy`, `--color-ivory`) as-is — they already point at the same tokens.
-
-Rename the semantic Tailwind color exports so classnames stay readable:
-- Add `--color-navy` → `var(--emerald)` (already there), `--color-navy-soft` → `var(--emerald-soft)` (already there).
-- Keep `--color-emerald` / `--color-emerald-soft` / `--color-emerald-deep` / `--color-gold` / `--color-gold-soft` / `--color-cream` names intact so no component needs editing. The names become historical labels for tokens that now carry navy values — acceptable trade-off to keep the diff to a single file.
-
-Also update `::selection` background to the new accent (`#3b6fa0`) with cream text.
-
-### 2. Homepage tile: "Peer-Reviewed Articles" → "Definitions & Glossary"
-
-In `src/routes/index.tsx`, change the first entry of the `journal` array:
-- `title: "Definitions & Glossary"`
-- `meta: "Reference"`
-- `to: "/guides"` (keeps routing to the existing guides page — no new route needed for a one-tile swap)
-
-No other copy changes.
-
-### Technical notes
-
-- Single edit to `src/styles.css` handles the entire color remap.
-- Single edit to `src/routes/index.tsx` handles the tile swap.
-- No component, route, or dependency changes.
+No routing, nav, or palette changes. No new files.
