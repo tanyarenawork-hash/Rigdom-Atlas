@@ -110,6 +110,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&display=swap",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              name: "Rigdom Atlas",
+              url: "https://rigdomatlas.com",
+              description:
+                "Nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks.",
+            },
+            {
+              "@type": "WebSite",
+              name: "Rigdom Atlas",
+              url: "https://rigdomatlas.com",
+            },
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
