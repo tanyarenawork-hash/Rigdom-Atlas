@@ -79,24 +79,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rigdom Atlas" },
+      { title: "Rigdom Atlas — Nonpartisan Financial Literacy & Education" },
       {
         name: "description",
         content:
-          "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
+          "Nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, families, and entrepreneurs.",
       },
       { name: "author", content: "Rigdom Atlas" },
       { name: "google-site-verification", content: "pBNZ8lIHdLlaZOYatemuC5UrKYJk-1VQwbjHe2KhqXs" },
-      { property: "og:title", content: "Rigdom Atlas" },
+      { property: "og:site_name", content: "Rigdom Atlas" },
+      { property: "og:title", content: "Rigdom Atlas — Financial Literacy Institution" },
       {
         property: "og:description",
         content:
-          "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
+          "Peer-edited guides, calculators, and frameworks for financial literacy — for students, families, and entrepreneurs.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Rigdom Atlas" },
-      { name: "twitter:description", content: "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs." },
+      { name: "twitter:title", content: "Rigdom Atlas — Financial Literacy Institution" },
+      { name: "twitter:description", content: "Peer-edited guides, calculators, and frameworks for financial literacy — for students, families, and entrepreneurs." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2745e13c-22bc-4daa-a57a-a055589c545b/id-preview-0349b47d--4bd26091-7d54-455f-822b-b02e58b754f9.lovable.app-1783830079311.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2745e13c-22bc-4daa-a57a-a055589c545b/id-preview-0349b47d--4bd26091-7d54-455f-822b-b02e58b754f9.lovable.app-1783830079311.png" },
     ],
@@ -107,6 +108,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              name: "Rigdom Atlas",
+              url: "https://rigdomatlas.com",
+              description:
+                "Nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks.",
+            },
+            {
+              "@type": "WebSite",
+              name: "Rigdom Atlas",
+              url: "https://rigdomatlas.com",
+            },
+          ],
+        }),
       },
     ],
   }),

@@ -11,7 +11,9 @@ export const Route = createFileRoute("/newsletter")({
       { name: "description", content: "A monthly digest of essential personal finance ideas, new guides, and updates from the Atlas." },
       { property: "og:title", content: "Newsletter — Rigdom Atlas" },
       { property: "og:description", content: "Subscribe to a measured, advertisement-free personal finance newsletter." },
+      { property: "og:url", content: "https://rigdomatlas.com/newsletter" },
     ],
+    links: [{ rel: "canonical", href: "https://rigdomatlas.com/newsletter" }],
   }),
   component: Newsletter,
 });
@@ -28,7 +30,7 @@ function Newsletter() {
         intro="One thoughtful issue per month: new guides, evergreen ideas, and brief notes on the financial topics that quietly shape life."
       />
 
-      <Section>
+      <Section eyebrow="Subscribe" title={<>Join the Dispatch.</>}>
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-7">
             <form
@@ -58,6 +60,7 @@ function Newsletter() {
                     <input
                       type="email"
                       required
+                      aria-label="Email address"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="you@example.com"

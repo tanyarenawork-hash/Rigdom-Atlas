@@ -6,19 +6,21 @@ import { Disclaimer } from "@/components/site/Disclaimer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rigdom Atlas" },
+      { title: "Rigdom Atlas — Nonpartisan Financial Literacy & Education" },
       {
         name: "description",
         content:
-          "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
+          "Nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, families, and entrepreneurs.",
       },
-      { property: "og:title", content: "Rigdom Atlas" },
+      { property: "og:title", content: "Rigdom Atlas — Financial Literacy Institution" },
       {
         property: "og:description",
         content:
-          "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
+          "Peer-edited guides, calculators, and frameworks for financial literacy — for students, families, and entrepreneurs.",
       },
+      { property: "og:url", content: "https://rigdomatlas.com/" },
     ],
+    links: [{ rel: "canonical", href: "https://rigdomatlas.com/" }],
   }),
   component: Index,
 });
@@ -53,7 +55,7 @@ function Index() {
             Established for the Public Good
           </span>
           <h1 className="mt-8 font-serif text-6xl md:text-8xl lg:text-[9rem] leading-[0.92] text-emerald">
-            Rigdom <span className="italic">Atlas</span>
+            Rigdom <span className="italic">Atlas</span> — Financial Literacy for the Public Good
           </h1>
           <p className="mt-10 text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed font-light text-emerald/80">
             A nonpartisan financial literacy institution dedicated to
@@ -206,6 +208,7 @@ function Index() {
               <input
                 type="email"
                 required
+                aria-label="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Institutional email"

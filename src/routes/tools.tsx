@@ -10,7 +10,9 @@ export const Route = createFileRoute("/tools")({
       { name: "description", content: "Interactive calculators for budgeting, compound interest, mortgage payments, and debt payoff." },
       { property: "og:title", content: "Tools & Calculators — Rigdom Atlas" },
       { property: "og:description", content: "Quiet, educational calculators built to illustrate concepts — not to recommend products." },
+      { property: "og:url", content: "https://rigdomatlas.com/tools" },
     ],
+    links: [{ rel: "canonical", href: "https://rigdomatlas.com/tools" }],
   }),
   component: Tools,
 });
@@ -210,7 +212,7 @@ function Tools() {
         title={<>Quiet tools for clearer decisions.</>}
         intro="Each calculator illustrates a concept. None of them recommend a product, account, or course of action."
       />
-      <Section>
+      <Section eyebrow="Calculators" title={<>Four core calculators.</>}>
         <div className="grid lg:grid-cols-2 gap-6">
           <CompoundCalc />
           <MortgageCalc />
