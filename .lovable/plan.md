@@ -1,23 +1,17 @@
 ## Change
 
-Convert `/guides` from an article list to a financial literacy glossary.
+Remove the entire Curricula / Learning Paths section from the website.
 
-### Edits (single file: `src/routes/guides.tsx`)
+### Edits
 
-1. Update `head()` meta: title "Financial Glossary — Rigdom Atlas"; description around plain-language definitions of essential personal-finance terms; matching og:title/og:description.
-2. Update `PageHero`: eyebrow "Financial Glossary", title "Essential terms in personal finance, defined plainly.", intro about clear reference definitions across the eight pillars.
-3. Replace the `guides` array with a `terms` array of ~24 entries shaped `{ cat, term, definition }` spanning Budgeting, Credit, Saving, Investing, Taxes, Real Estate, Entrepreneurship, Financial Planning. Examples:
-   - Budgeting — "Zero-Based Budget": Every dollar of income is assigned to a category so income minus allocations equals zero.
-   - Credit — "APR": The yearly cost of borrowing, expressed as a percentage that includes interest and certain fees.
-   - Investing — "Index Fund": A fund that mirrors a market index, offering broad diversification at low cost.
-   - Taxes — "Marginal Tax Rate": The tax rate applied to your next dollar of income, not your entire income.
-   - Real Estate — "Escrow": A neutral account holding funds or documents until the terms of a transaction are met.
-   - Entrepreneurship — "Pass-Through Entity": A business whose profits are taxed on the owner's personal return rather than at the entity level.
-   - Financial Planning — "Term Life Insurance": Coverage for a fixed period that pays a benefit only if death occurs within that term.
-   (Full set drafted at build time; ~3 per pillar.)
-4. Replace the article row markup: keep the same rounded bordered list container, but each row shows category eyebrow, `term` as the serif headline, and the `definition` as a paragraph beneath it. Remove the read-time span and the `ArrowUpRight` circular affordance (and its import) — glossary entries are not linked.
-5. Keep `Section`, `Disclaimer`, and overall spacing unchanged.
+1. Delete `src/routes/learning-paths.tsx` and regenerate the TanStack Router route tree so `/learning-paths` no longer exists.
+2. Remove the "Curricula" link from the main navigation in `src/components/site/Nav.tsx`.
+3. Remove the "Curriculum" footer column in `src/components/site/Footer.tsx`, merge the Journal link into the Library column, and switch the link grid to two columns.
+4. Update the homepage in `src/routes/index.tsx`:
+   - Replace the "Enter the Curriculum" hero CTA with a "Read the Journal" primary link and an "Explore Instruments" secondary link.
+   - Rename the Eight Pillars eyebrow from "The Core Curriculum" to "The Eight Pillars" and the heading from "The Eight Pillars of Finance" to "Foundations of Finance".
+5. Remove the `/learning-paths` entry from `src/routes/sitemap[.]xml.ts`.
 
 ### Out of scope
 
-No routing, nav, or palette changes. No new files.
+No other content or page changes. The `/guides` glossary, `/tools`, `/resources`, and other pages remain as-is.
