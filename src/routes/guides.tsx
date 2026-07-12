@@ -9,6 +9,20 @@ export const Route = createFileRoute("/guides")({
       { name: "description", content: "Plain-language definitions of essential personal finance terms across budgeting, credit, saving, investing, taxes, real estate, entrepreneurship, and planning." },
       { property: "og:title", content: "Financial Glossary — Rigdom Atlas" },
       { property: "og:description", content: "A clear reference for the terms that shape everyday money decisions." },
+      { property: "og:url", content: "https://rigdomatlas.com/guides" },
+    ],
+    links: [{ rel: "canonical", href: "https://rigdomatlas.com/guides" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Financial Glossary",
+          url: "https://rigdomatlas.com/guides",
+          description: "Plain-language definitions of essential personal finance terms.",
+        }),
+      },
     ],
   }),
   component: Guides,
