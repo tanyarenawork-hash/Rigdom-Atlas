@@ -33,7 +33,7 @@ export function Footer() {
             </h2>
             <p className="mt-8 max-w-sm text-cream/70 leading-relaxed">
               A nonpartisan educational institute for financial literacy —
-              publishing rigorous, ad-free curricula in service of the public
+              publishing rigorous, ad-free resources in service of the public
               good.
             </p>
           </div>
@@ -70,7 +70,7 @@ export function Footer() {
           </p>
           <p className="md:text-right">
             © MMXXVI Rigdom Atlas · All rights reserved · The Eight Pillars is
-            a published curriculum of the Atlas Institute.
+            a published framework of the Atlas Institute.
           </p>
         </div>
       </div>
