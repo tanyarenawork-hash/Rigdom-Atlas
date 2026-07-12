@@ -72,7 +72,7 @@ function Guides() {
         intro="A clear reference across the eight pillars of personal finance — each term written to be understood the first time."
       />
 
-      <Section>
+      <Section eyebrow="Reference" title={<>Terms across the eight pillars.</>}>
         <div className="rounded-3xl border border-border overflow-hidden">
           {terms.map((t, i) => (
             <article
