@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageHero, Section } from "@/components/site/Section";
 import { Disclaimer } from "@/components/site/Disclaimer";
-import { Mail, MapPin, Check } from "lucide-react";
+import { Check } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -29,23 +29,6 @@ function Contact() {
 
       <Section>
         <div className="grid lg:grid-cols-12 gap-12">
-          <aside className="lg:col-span-4 space-y-8">
-            <div>
-              <Mail strokeWidth={1.25} className="h-6 w-6 text-accent" />
-              <p className="eyebrow mt-4">Editorial</p>
-              <p className="mt-2 font-serif text-xl">hello@rigdomatlas.org</p>
-            </div>
-            <div>
-              <MapPin strokeWidth={1.25} className="h-6 w-6 text-accent" />
-              <p className="eyebrow mt-4">Office</p>
-              <p className="mt-2 font-serif text-xl leading-snug">
-                Rigdom Atlas<br />
-                Financial Literacy Initiative<br />
-                United States
-              </p>
-            </div>
-          </aside>
-
           <form
             onSubmit={(e) => {
               e.preventDefault();
