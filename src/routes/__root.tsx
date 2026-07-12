@@ -86,6 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
       },
       { name: "author", content: "Rigdom Atlas" },
+      { name: "google-site-verification", content: "pBNZ8lIHdLlaZOYatemuC5UrKYJk-1VQwbjHe2KhqXs" },
       { property: "og:title", content: "Rigdom Atlas" },
       {
         property: "og:description",
