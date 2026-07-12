@@ -10,7 +10,9 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Rigdom Atlas is an independent financial literacy organization committed to clear, accessible education." },
       { property: "og:title", content: "About — Rigdom Atlas" },
       { property: "og:description", content: "Our mission, our standards, and what Rigdom Atlas is — and isn't." },
+      { property: "og:url", content: "https://rigdomatlas.com/about" },
     ],
+    links: [{ rel: "canonical", href: "https://rigdomatlas.com/about" }],
   }),
   component: About,
 });
