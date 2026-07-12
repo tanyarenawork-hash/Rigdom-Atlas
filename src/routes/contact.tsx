@@ -11,7 +11,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Reach the Rigdom Atlas editorial team for questions, feedback, or educational partnerships." },
       { property: "og:title", content: "Contact — Rigdom Atlas" },
       { property: "og:description", content: "Get in touch with the Rigdom Atlas team." },
+      { property: "og:url", content: "https://rigdomatlas.com/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://rigdomatlas.com/contact" }],
   }),
   component: Contact,
 });
