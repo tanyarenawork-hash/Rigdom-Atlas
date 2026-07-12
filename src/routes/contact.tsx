@@ -28,13 +28,13 @@ function Contact() {
       />
 
       <Section>
-        <div className="grid lg:grid-cols-12 gap-12">
+        <div>
           <form
             onSubmit={(e) => {
               e.preventDefault();
               setSent(true);
             }}
-            className="lg:col-span-8 rounded-3xl border border-border bg-card p-8 md:p-10"
+            className="rounded-3xl border border-border bg-card p-8 md:p-10"
           >
             {sent ? (
               <div className="text-center py-12">
