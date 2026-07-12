@@ -13,7 +13,6 @@ import { Route as ToolsRouteImport } from './routes/tools'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as NewsletterRouteImport } from './routes/newsletter'
-import { Route as LearningPathsRouteImport } from './routes/learning-paths'
 import { Route as GuidesRouteImport } from './routes/guides'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
@@ -37,11 +36,6 @@ const ResourcesRoute = ResourcesRouteImport.update({
 const NewsletterRoute = NewsletterRouteImport.update({
   id: '/newsletter',
   path: '/newsletter',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LearningPathsRoute = LearningPathsRouteImport.update({
-  id: '/learning-paths',
-  path: '/learning-paths',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GuidesRoute = GuidesRouteImport.update({
@@ -70,7 +64,6 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/guides': typeof GuidesRoute
-  '/learning-paths': typeof LearningPathsRoute
   '/newsletter': typeof NewsletterRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -81,7 +74,6 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/guides': typeof GuidesRoute
-  '/learning-paths': typeof LearningPathsRoute
   '/newsletter': typeof NewsletterRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -93,7 +85,6 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/guides': typeof GuidesRoute
-  '/learning-paths': typeof LearningPathsRoute
   '/newsletter': typeof NewsletterRoute
   '/resources': typeof ResourcesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -106,7 +97,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/guides'
-    | '/learning-paths'
     | '/newsletter'
     | '/resources'
     | '/sitemap.xml'
@@ -117,7 +107,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/guides'
-    | '/learning-paths'
     | '/newsletter'
     | '/resources'
     | '/sitemap.xml'
@@ -128,7 +117,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/guides'
-    | '/learning-paths'
     | '/newsletter'
     | '/resources'
     | '/sitemap.xml'
@@ -140,7 +128,6 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   GuidesRoute: typeof GuidesRoute
-  LearningPathsRoute: typeof LearningPathsRoute
   NewsletterRoute: typeof NewsletterRoute
   ResourcesRoute: typeof ResourcesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -175,13 +162,6 @@ declare module '@tanstack/react-router' {
       path: '/newsletter'
       fullPath: '/newsletter'
       preLoaderRoute: typeof NewsletterRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/learning-paths': {
-      id: '/learning-paths'
-      path: '/learning-paths'
-      fullPath: '/learning-paths'
-      preLoaderRoute: typeof LearningPathsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/guides': {
@@ -220,7 +200,6 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   GuidesRoute: GuidesRoute,
-  LearningPathsRoute: LearningPathsRoute,
   NewsletterRoute: NewsletterRoute,
   ResourcesRoute: ResourcesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

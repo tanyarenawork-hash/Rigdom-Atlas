@@ -10,19 +10,11 @@ const cols = [
     ],
   },
   {
-    title: "Curriculum",
-    links: [
-      { to: "/guides", label: "The Journal" },
-      { to: "/learning-paths", label: "Curricula" },
-      { to: "/tools", label: "Instruments" },
-    ],
-  },
-  {
     title: "Library",
     links: [
+      { to: "/guides", label: "The Journal" },
       { to: "/resources", label: "Downloadable Templates" },
-      { to: "/resources", label: "Certification Guidance" },
-      { to: "/resources", label: "Suggested Reading" },
+      { to: "/tools", label: "Instruments" },
     ],
   },
 ] as const;
@@ -41,12 +33,12 @@ export function Footer() {
             </h2>
             <p className="mt-8 max-w-sm text-cream/70 leading-relaxed">
               A nonpartisan educational institute for financial literacy —
-              publishing rigorous, ad-free curricula in service of the public
+              publishing rigorous, ad-free resources in service of the public
               good.
             </p>
           </div>
 
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-10">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-10">
             {cols.map((c) => (
               <div key={c.title}>
                 <p className="text-[10px] uppercase tracking-[0.24em] text-gold font-semibold pb-4 border-b border-cream/20">
@@ -78,7 +70,7 @@ export function Footer() {
           </p>
           <p className="md:text-right">
             © MMXXVI Rigdom Atlas · All rights reserved · The Eight Pillars is
-            a published curriculum of the Atlas Institute.
+            a published framework of the Atlas Institute.
           </p>
         </div>
       </div>

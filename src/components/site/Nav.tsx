@@ -6,7 +6,6 @@ const links = [
   { to: "/", label: "Institute" },
   { to: "/about", label: "About" },
   { to: "/guides", label: "Journal" },
-  { to: "/learning-paths", label: "Curricula" },
   { to: "/resources", label: "Library" },
   { to: "/tools", label: "Instruments" },
   { to: "/contact", label: "Contact" },

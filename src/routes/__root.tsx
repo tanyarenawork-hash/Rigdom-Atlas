@@ -90,7 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "A nonprofit institute publishing peer-edited guides, calculators, and curricula across the eight pillars of personal finance.",
+          "A nonprofit institute publishing peer-edited guides, calculators, and frameworks across the eight pillars of personal finance.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
