@@ -35,7 +35,7 @@ const pillars = [
 ];
 
 const journal = [
-  { title: "Peer-Reviewed Articles", meta: "Quarterly", to: "/guides" },
+  { title: "Definitions & Glossary", meta: "Reference", to: "/guides" },
   { title: "Financial Instruments", meta: "Interactive", to: "/tools" },
   { title: "Professional Certifications", meta: "Foundations", to: "/resources" },
   { title: "The Atlas Dispatch", meta: "Newsletter", to: "/newsletter" },
