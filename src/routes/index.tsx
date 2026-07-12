@@ -55,7 +55,7 @@ function Index() {
             Established for the Public Good
           </span>
           <h1 className="mt-8 font-serif text-6xl md:text-8xl lg:text-[9rem] leading-[0.92] text-emerald">
-            Rigdom <span className="italic">Atlas</span>
+            Rigdom <span className="italic">Atlas</span> — Financial Literacy for the Public Good
           </h1>
           <p className="mt-10 text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed font-light text-emerald/80">
             A nonpartisan financial literacy institution dedicated to
