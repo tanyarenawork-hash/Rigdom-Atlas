@@ -11,7 +11,9 @@ export const Route = createFileRoute("/newsletter")({
       { name: "description", content: "A monthly digest of essential personal finance ideas, new guides, and updates from the Atlas." },
       { property: "og:title", content: "Newsletter — Rigdom Atlas" },
       { property: "og:description", content: "Subscribe to a measured, advertisement-free personal finance newsletter." },
+      { property: "og:url", content: "https://rigdomatlas.com/newsletter" },
     ],
+    links: [{ rel: "canonical", href: "https://rigdomatlas.com/newsletter" }],
   }),
   component: Newsletter,
 });
