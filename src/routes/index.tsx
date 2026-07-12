@@ -10,13 +10,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and curricula for students, professionals, families, and entrepreneurs.",
+          "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
       },
       { property: "og:title", content: "Rigdom Atlas — The Institute for Financial Literacy" },
       {
         property: "og:description",
         content:
-          "Educational curricula across the eight pillars of personal finance — clarity over jargon, rigor over urgency.",
+          "Educational frameworks across the eight pillars of personal finance — clarity over jargon, rigor over urgency.",
       },
     ],
   }),
