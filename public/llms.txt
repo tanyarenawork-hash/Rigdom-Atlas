@@ -1,0 +1,15 @@
+# Rigdom Atlas
+
+> Nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, families, and entrepreneurs.
+
+Rigdom Atlas is an educational, ad-free organization. It is not a bank, brokerage, or investment adviser. All materials are for educational purposes only.
+
+## Pages
+
+- [Home](/): Overview of Rigdom Atlas and the eight pillars of personal finance.
+- [About](/about): Mission, editorial standards, and scope.
+- [Financial Glossary](/guides): Plain-language definitions of essential personal finance terms.
+- [Tools & Calculators](/tools): Compound interest, mortgage, 50/30/20 budget, and debt payoff calculators.
+- [Resources](/resources): Downloadable worksheets, certification recommendations, and curated reading.
+- [Newsletter](/newsletter): The Atlas Dispatch — a monthly ad-free digest.
+- [Contact](/contact): Reach the editorial team.
