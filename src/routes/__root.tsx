@@ -79,21 +79,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rigdom Atlas — The Institute for Financial Literacy" },
+      { title: "Rigdom Atlas" },
       {
         name: "description",
         content:
-          "Rigdom Atlas is a nonpartisan educational institution publishing rigorous, ad-free financial literacy for students, professionals, families, and entrepreneurs.",
+          "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
       },
       { name: "author", content: "Rigdom Atlas" },
-      { property: "og:title", content: "Rigdom Atlas — The Institute for Financial Literacy" },
+      { property: "og:title", content: "Rigdom Atlas" },
       {
         property: "og:description",
         content:
-          "A nonprofit institute publishing peer-edited guides, calculators, and frameworks across the eight pillars of personal finance.",
+          "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Rigdom Atlas" },
+      { name: "twitter:description", content: "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2745e13c-22bc-4daa-a57a-a055589c545b/id-preview-0349b47d--4bd26091-7d54-455f-822b-b02e58b754f9.lovable.app-1783830079311.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2745e13c-22bc-4daa-a57a-a055589c545b/id-preview-0349b47d--4bd26091-7d54-455f-822b-b02e58b754f9.lovable.app-1783830079311.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

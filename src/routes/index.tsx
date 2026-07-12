@@ -6,17 +6,17 @@ import { Disclaimer } from "@/components/site/Disclaimer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rigdom Atlas — The Institute for Financial Literacy" },
+      { title: "Rigdom Atlas" },
       {
         name: "description",
         content:
           "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
       },
-      { property: "og:title", content: "Rigdom Atlas — The Institute for Financial Literacy" },
+      { property: "og:title", content: "Rigdom Atlas" },
       {
         property: "og:description",
         content:
-          "Educational frameworks across the eight pillars of personal finance — clarity over jargon, rigor over urgency.",
+          "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
       },
     ],
   }),
