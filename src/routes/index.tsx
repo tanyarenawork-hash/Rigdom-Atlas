@@ -62,17 +62,17 @@ function Index() {
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-3">
             <Link
-              to="/learning-paths"
+              to="/guides"
               className="inline-flex items-center gap-2 bg-emerald text-cream px-8 py-4 text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-emerald-soft transition-colors"
             >
-              Enter the Curriculum
+              Read the Journal
               <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
             <Link
-              to="/guides"
+              to="/tools"
               className="inline-flex items-center gap-2 border border-emerald px-8 py-4 text-[11px] uppercase tracking-[0.2em] font-semibold text-emerald hover:bg-emerald/5 transition-colors"
             >
-              Read the Journal
+              Explore Instruments
             </Link>
           </div>
         </div>
@@ -84,10 +84,10 @@ function Index() {
           <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
               <p className="text-[10px] uppercase tracking-[0.24em] font-semibold text-emerald-soft">
-                The Core Curriculum
+                The Eight Pillars
               </p>
               <h2 className="mt-4 font-serif text-4xl md:text-6xl text-emerald leading-[1.02]">
-                The Eight Pillars <span className="italic">of Finance</span>
+                Foundations <span className="italic">of Finance</span>
               </h2>
               <div className="mt-6 w-24 h-px bg-gold"></div>
             </div>
