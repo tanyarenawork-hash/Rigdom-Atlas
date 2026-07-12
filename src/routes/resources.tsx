@@ -26,7 +26,7 @@ const certifications = [
   { name: "AFC — Accredited Financial Counselor", body: "For those pursuing financial coaching and education careers." },
   { name: "CFP — Certified Financial Planner", body: "The standard credential for comprehensive financial planning." },
   { name: "EA — Enrolled Agent", body: "An IRS-authorized credential focused on taxation." },
-  { name: "ChFC — Chartered Financial Consultant", body: "A planning-focused designation with deep curriculum." },
+  { name: "ChFC — Chartered Financial Consultant", body: "A planning-focused designation with deep coursework." },
 ];
 
 const careers = [
