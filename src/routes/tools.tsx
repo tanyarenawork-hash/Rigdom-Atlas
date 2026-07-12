@@ -212,7 +212,7 @@ function Tools() {
         title={<>Quiet tools for clearer decisions.</>}
         intro="Each calculator illustrates a concept. None of them recommend a product, account, or course of action."
       />
-      <Section>
+      <Section eyebrow="Calculators" title={<>Four core calculators.</>}>
         <div className="grid lg:grid-cols-2 gap-6">
           <CompoundCalc />
           <MortgageCalc />
