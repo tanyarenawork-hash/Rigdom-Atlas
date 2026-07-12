@@ -50,20 +50,20 @@
 :root {
   --radius: 0.25rem;
 
-  /* Emerald Prestige palette */
-  --cream: #f5f0e0;
-  --mist: #ece6d3;
-  --emerald: #064e3b;
-  --emerald-soft: #0d7a5f;
-  --emerald-deep: #043c2d;
-  --gold: #c9a84c;
-  --gold-soft: #d4b96a;
+  /* Navy Trust palette */
+  --cream: #e8edf3;
+  --mist: #dbe3ec;
+  --emerald: #0f1b3d;
+  --emerald-soft: #1e3a5f;
+  --emerald-deep: #0a1229;
+  --gold: #3b6fa0;
+  --gold-soft: #5c8cbf;
 
   --background: var(--cream);
   --foreground: var(--emerald);
-  --card: #faf6e8;
+  --card: #f2f5f9;
   --card-foreground: var(--emerald);
-  --popover: #faf6e8;
+  --popover: #f2f5f9;
   --popover-foreground: var(--emerald);
   --primary: var(--emerald);
   --primary-foreground: var(--cream);
@@ -74,7 +74,7 @@
   --accent: var(--gold);
   --accent-foreground: var(--emerald);
   --destructive: oklch(0.55 0.2 27);
-  --destructive-foreground: #faf6e8;
+  --destructive-foreground: #f2f5f9;
   --border: color-mix(in oklab, var(--emerald) 15%, transparent);
   --input: color-mix(in oklab, var(--emerald) 15%, transparent);
   --ring: var(--gold);
