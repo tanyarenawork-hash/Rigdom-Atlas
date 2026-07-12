@@ -30,7 +30,7 @@ function Newsletter() {
         intro="One thoughtful issue per month: new guides, evergreen ideas, and brief notes on the financial topics that quietly shape life."
       />
 
-      <Section>
+      <Section eyebrow="Subscribe" title={<>Join the Dispatch.</>}>
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-7">
             <form
