@@ -6,19 +6,21 @@ import { Disclaimer } from "@/components/site/Disclaimer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rigdom Atlas" },
+      { title: "Rigdom Atlas — Nonpartisan Financial Literacy & Education" },
       {
         name: "description",
         content:
-          "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
+          "Nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, families, and entrepreneurs.",
       },
-      { property: "og:title", content: "Rigdom Atlas" },
+      { property: "og:title", content: "Rigdom Atlas — Financial Literacy Institution" },
       {
         property: "og:description",
         content:
-          "A nonpartisan financial literacy institution publishing peer-edited guides, calculators, and frameworks for students, professionals, families, and entrepreneurs.",
+          "Peer-edited guides, calculators, and frameworks for financial literacy — for students, families, and entrepreneurs.",
       },
+      { property: "og:url", content: "https://rigdomatlas.com/" },
     ],
+    links: [{ rel: "canonical", href: "https://rigdomatlas.com/" }],
   }),
   component: Index,
 });
