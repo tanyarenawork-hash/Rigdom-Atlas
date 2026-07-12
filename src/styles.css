@@ -32,46 +32,51 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --color-navy: var(--navy);
-  --color-navy-soft: var(--navy-soft);
+  --color-emerald: var(--emerald);
+  --color-emerald-soft: var(--emerald-soft);
+  --color-emerald-deep: var(--emerald-deep);
+  --color-navy: var(--emerald);
+  --color-navy-soft: var(--emerald-soft);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
-  --color-ivory: var(--ivory);
+  --color-cream: var(--cream);
+  --color-ivory: var(--cream);
   --color-mist: var(--mist);
 
-  --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0.25rem;
 
-  /* Brand palette */
-  --ivory: oklch(0.992 0.004 95);          /* matte white */
-  --mist: oklch(0.965 0.005 250);           /* soft gray section */
-  --navy: oklch(0.235 0.045 260);           /* deep navy */
-  --navy-soft: oklch(0.38 0.045 260);
-  --gold: oklch(0.78 0.09 85);              /* champagne gold */
-  --gold-soft: oklch(0.9 0.05 85);
+  /* Emerald Prestige palette */
+  --cream: #f5f0e0;
+  --mist: #ece6d3;
+  --emerald: #064e3b;
+  --emerald-soft: #0d7a5f;
+  --emerald-deep: #043c2d;
+  --gold: #c9a84c;
+  --gold-soft: #d4b96a;
 
-  --background: var(--ivory);
-  --foreground: var(--navy);
-  --card: oklch(1 0 0);
-  --card-foreground: var(--navy);
-  --popover: oklch(1 0 0);
-  --popover-foreground: var(--navy);
-  --primary: var(--navy);
-  --primary-foreground: var(--ivory);
+  --background: var(--cream);
+  --foreground: var(--emerald);
+  --card: #faf6e8;
+  --card-foreground: var(--emerald);
+  --popover: #faf6e8;
+  --popover-foreground: var(--emerald);
+  --primary: var(--emerald);
+  --primary-foreground: var(--cream);
   --secondary: var(--mist);
-  --secondary-foreground: var(--navy);
+  --secondary-foreground: var(--emerald);
   --muted: var(--mist);
-  --muted-foreground: oklch(0.48 0.02 260);
+  --muted-foreground: color-mix(in oklab, var(--emerald) 65%, transparent);
   --accent: var(--gold);
-  --accent-foreground: var(--navy);
+  --accent-foreground: var(--emerald);
   --destructive: oklch(0.55 0.2 27);
-  --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.9 0.008 260);
-  --input: oklch(0.9 0.008 260);
+  --destructive-foreground: #faf6e8;
+  --border: color-mix(in oklab, var(--emerald) 15%, transparent);
+  --input: color-mix(in oklab, var(--emerald) 15%, transparent);
   --ring: var(--gold);
 }
 
@@ -87,12 +92,16 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
+    font-weight: 400;
   }
   h1, h2, h3, .font-serif {
     font-family: var(--font-serif);
-    font-feature-settings: "ss01";
-    letter-spacing: -0.02em;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: var(--gold);
+    color: var(--emerald);
   }
 }
 
@@ -110,15 +119,15 @@
 @utility eyebrow {
   font-family: var(--font-sans);
   font-size: 0.7rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--navy-soft);
+  color: var(--emerald-soft);
 }
 
 @utility gold-rule {
   display: inline-block;
-  width: 2.5rem;
+  width: 1.5rem;
   height: 1px;
   background: var(--gold);
   vertical-align: middle;

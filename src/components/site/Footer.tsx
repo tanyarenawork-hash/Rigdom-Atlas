@@ -1,54 +1,84 @@
 import { Link } from "@tanstack/react-router";
 
+const cols = [
+  {
+    title: "Institute",
+    links: [
+      { to: "/about", label: "About the Atlas" },
+      { to: "/contact", label: "Editorial Contact" },
+      { to: "/newsletter", label: "The Dispatch" },
+    ],
+  },
+  {
+    title: "Curriculum",
+    links: [
+      { to: "/guides", label: "The Journal" },
+      { to: "/learning-paths", label: "Curricula" },
+      { to: "/tools", label: "Instruments" },
+    ],
+  },
+  {
+    title: "Library",
+    links: [
+      { to: "/resources", label: "Downloadable Templates" },
+      { to: "/resources", label: "Certification Guidance" },
+      { to: "/resources", label: "Suggested Reading" },
+    ],
+  },
+] as const;
+
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-border bg-muted/40">
-      <div className="container-page py-16 grid gap-12 lg:grid-cols-4">
-        <div className="lg:col-span-2 max-w-md">
-          <div className="flex items-center gap-2.5">
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-primary text-primary-foreground font-serif text-sm">
-              R
-            </span>
-            <span className="font-serif text-lg tracking-tight">
-              Rigdom <span className="text-accent">Atlas</span>
-            </span>
+    <footer className="bg-emerald text-cream">
+      <div className="container-page pt-24 pb-16">
+        <div className="grid gap-16 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <p className="text-[10px] uppercase tracking-[0.24em] text-gold font-semibold">
+              Est. MMXXIV
+            </p>
+            <h2 className="mt-4 font-serif text-6xl md:text-7xl leading-[0.9] italic">
+              Rigdom<br />Atlas
+            </h2>
+            <p className="mt-8 max-w-sm text-cream/70 leading-relaxed">
+              A nonpartisan educational institute for financial literacy —
+              publishing rigorous, ad-free curricula in service of the public
+              good.
+            </p>
           </div>
-          <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-            An independent financial literacy organization dedicated to making
-            wealth-building knowledge accessible to students, professionals,
-            families, and aspiring entrepreneurs.
+
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-10">
+            {cols.map((c) => (
+              <div key={c.title}>
+                <p className="text-[10px] uppercase tracking-[0.24em] text-gold font-semibold pb-4 border-b border-cream/20">
+                  {c.title}
+                </p>
+                <ul className="mt-5 space-y-3">
+                  {c.links.map((l, i) => (
+                    <li key={c.title + i}>
+                      <Link
+                        to={l.to}
+                        className="font-serif text-lg text-cream/90 hover:text-gold transition-colors"
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-20 pt-8 border-t border-cream/20 grid gap-6 md:grid-cols-2 text-[10px] uppercase tracking-[0.22em] text-cream/50 leading-loose">
+          <p>
+            Rigdom Atlas is an educational organization. Not a bank, not a
+            registered investment adviser, not a broker-dealer. All materials
+            are provided for general educational purposes only and do not
+            constitute financial, tax, legal, or investment advice.
           </p>
-          <p className="mt-6 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-            Educational Use Only
-          </p>
-        </div>
-
-        <div>
-          <h4 className="eyebrow mb-4">Learn</h4>
-          <ul className="space-y-2.5 text-sm">
-            <li><Link to="/guides" className="hover:text-accent">Financial Guides</Link></li>
-            <li><Link to="/learning-paths" className="hover:text-accent">Learning Paths</Link></li>
-            <li><Link to="/resources" className="hover:text-accent">Resources</Link></li>
-            <li><Link to="/tools" className="hover:text-accent">Calculators & Tools</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="eyebrow mb-4">Organization</h4>
-          <ul className="space-y-2.5 text-sm">
-            <li><Link to="/about" className="hover:text-accent">About</Link></li>
-            <li><Link to="/newsletter" className="hover:text-accent">Newsletter</Link></li>
-            <li><Link to="/contact" className="hover:text-accent">Contact</Link></li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-border">
-        <div className="container-page py-6 flex flex-col gap-3 md:flex-row md:items-center md:justify-between text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Rigdom Atlas. All rights reserved.</p>
-          <p className="max-w-2xl md:text-right">
-            Rigdom Atlas provides educational information only and does not
-            offer financial, tax, investment, or legal advice.
+          <p className="md:text-right">
+            © MMXXVI Rigdom Atlas · All rights reserved · The Eight Pillars is
+            a published curriculum of the Atlas Institute.
           </p>
         </div>
       </div>
