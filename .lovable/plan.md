@@ -1,14 +1,12 @@
 ## Change
 
-Remove the office and editorial contact details from the `/contact` page without changing anything else.
+Hide the Lovable "Edit with Lovable" badge on the published website.
 
-### Edits (single file: `src/routes/contact.tsx`)
+### Implementation
 
-1. Remove the entire `<aside>` element containing the Editorial email and Office address blocks.
-2. Remove the now-unused `Mail` and `MapPin` imports from `lucide-react`.
-3. Remove the `lg:grid-cols-12` wrapper and `lg:col-span-8` class from the form so the contact form fills the available width after the aside is removed.
-4. Keep the `PageHero`, form fields, submit behavior, and `Disclaimer` exactly as they are.
+1. Call `publish_settings--set_badge_visibility` with `hide_badge: true` to remove the Lovable icon/badge from the published site.
+2. Verify the badge is gone by taking a fresh screenshot of the live homepage.
 
 ### Out of scope
 
-No other pages, navigation, or content changes.
+No component, route, style, or content changes.
